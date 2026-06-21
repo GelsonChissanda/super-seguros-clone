@@ -12,7 +12,7 @@ import img6 from '../../assets/slide/666.png'
 import img7 from '../../assets/slide/7.png'
 
 const imagens = [img1, img2, img3, img4, img5, img6, img7];
-// const [atual, setAtual] = useState(imgens[0]);
+
 
 
 
@@ -25,28 +25,24 @@ const seguros = [
 
 export default function Home() {
 
-  /*  useEffect(() => {
+  const [atual, setAtual] = useState(0);
+
+   useEffect(() => {
   const timer = setInterval(() => {
     setAtual((prev) => (prev + 1) % imagens.length);
   }, 3000);
   return () => clearInterval(timer);
-}, []);  */
+}, []);  
+
 
   return (
     <div>
       {/* Hero */}
-      <section style={{ backgroundImage: `url(${img1})` }}
-        className="bg-cover bg-center relative text-white py-24 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <Shield size={64} className="text-blue-200" />
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            A sua segurança,<br />a nossa missão
-          </h1>
-          <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-            Oferecemos as melhores soluções de seguros em Angola. Proteja o que mais importa para si.
-          </p>
+      <section style={{ backgroundImage: `url(${imagens[atual]})` }}
+        className="bg-cover bg-center relative text-white py-24 px-4 h-130 ">
+        <div className="max-w-4xl mx-auto text-center absolute bottom-15 left-0 right-0 ">
+          
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/cotacao"

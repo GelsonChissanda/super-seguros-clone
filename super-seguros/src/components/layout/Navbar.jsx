@@ -5,10 +5,10 @@ import logo from '../../assets/logo.png'
 
 
 const links = [
-  { label: 'Início', path: '/' },
-  { label: 'Seguros', path: '/seguros' },
-  { label: 'Sobre Nós', path: '/sobre' },
-  { label: 'Contactos', path: '/contactos' },
+  { label: 'SUPER', path: '/' },
+  { label: 'PRODUTOS', path: '/seguros' },
+  { label: 'APOIO AO CLIENTE', path: '/sobre' },
+  { label: 'RELATÓRIO E CONTAS', path: '/contactos' },
 ]
 
 export default function Navbar() {
