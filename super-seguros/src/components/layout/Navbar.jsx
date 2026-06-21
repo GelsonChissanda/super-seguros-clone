@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, Shield } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
+import logo from '../../assets/logo.png'
 
 const links = [
   { label: 'Início', path: '/' },
@@ -14,13 +15,12 @@ export default function Navbar() {
   const { pathname } = useLocation()
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50">
+    <nav className="bg-white shadow-md sticky h-32.75 top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 text-blue-700 font-bold text-xl">
-          <Shield size={28} />
-          Super Seguros
+        <Link to="/" className="flex items-center gap-2 font-bold text-xl ">
+          <img src={logo} alt="Logo" className="w-43.75 h-[91.52px]" />
         </Link>
 
         {/* Links desktop */}
