@@ -1,5 +1,20 @@
 import { Link } from 'react-router-dom'
 import { Shield, Car, Heart, Home as HomeIcon, Plane, ArrowRight } from 'lucide-react'
+import { useEffect, useState } from 'react'
+
+
+import img1 from '../../assets/slide/00.png'
+import img2 from '../../assets/slide/111.png'
+import img3 from '../../assets/slide/333.png'
+import img4 from '../../assets/slide/444.png'
+import img5 from '../../assets/slide/555.png'
+import img6 from '../../assets/slide/666.png'
+import img7 from '../../assets/slide/7.png'
+
+const imagens = [img1, img2, img3, img4, img5, img6, img7];
+// const [atual, setAtual] = useState(imgens[0]);
+
+
 
 const seguros = [
   { icon: <Car size={32} />, nome: 'Seguro Automóvel', desc: 'Proteja o seu veículo contra acidentes e roubos.' },
@@ -9,10 +24,19 @@ const seguros = [
 ]
 
 export default function Home() {
+
+  /*  useEffect(() => {
+  const timer = setInterval(() => {
+    setAtual((prev) => (prev + 1) % imagens.length);
+  }, 3000);
+  return () => clearInterval(timer);
+}, []);  */
+
   return (
     <div>
       {/* Hero */}
-      <section className="bg-blue-700 text-white py-24 px-4">
+      <section style={{ backgroundImage: `url(${img1})` }}
+        className="bg-cover bg-center relative text-white py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex justify-center mb-6">
             <Shield size={64} className="text-blue-200" />

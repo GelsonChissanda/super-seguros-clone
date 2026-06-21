@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import logo from '../../assets/logo.png'
 
+
 const links = [
   { label: 'Início', path: '/' },
   { label: 'Seguros', path: '/seguros' },
